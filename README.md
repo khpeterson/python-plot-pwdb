@@ -1,4 +1,4 @@
-## plot-pwdb: PWDB Plotting Scripts/Tools
+## python-plot-pwdb: PWDB Plotting Scripts/Tools
 
 These scripts/tools enable plotting with python of the virtual datasets
 created by the Haemodynamic Modelling Research Group at King's College
