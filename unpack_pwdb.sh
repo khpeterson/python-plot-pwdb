@@ -108,12 +108,12 @@ else
 	# dest dir,src URL,expected checksum
 	PWDB_ITEMS=(
 		"Complete,https://zenodo.org/records/11397985/files/exported_data.7z,aa7c4f3f4680839de3c6a8a477a2091b"
-		"ACA_A1,https://zenodo.org/records/11449121/files/exported_data.7z,ad40e4775910febee102df48ec92dee4"
-		"ACoA,https://zenodo.org/records/11473121/files/exported_data.7z,af30dbe43ef3cb8d8e48970386d0edea"
-		"PCA_P1,https://zenodo.org/records/11565240/files/exported_data.7z,2dfcdd9963df24ab412a623ad3e4d160"
-		"PCoAs,https://zenodo.org/records/11573814/files/exported_data.zip,6780cf81eee3a8e9cb18ce5715c8abd2"
-		"PCoA_PCA_P1,https://zenodo.org/records/11567853/files/exported_data.7z,49a5af4b2abf033e8628d1c5fb1f6fef"
-		"PCoA,https://zenodo.org/records/11571907/files/exported_data.7z,97f1de6402bd9aec409737d940c0ded3"
+		"ACA_A1,https://zenodo.org/records/11567853/files/exported_data.7z,49a5af4b2abf033e8628d1c5fb1f6fef"
+		"ACoA,https://zenodo.org/records/11449121/files/exported_data.7z,ad40e4775910febee102df48ec92dee4"
+		"PCA_P1,https://zenodo.org/records/11573814/files/exported_data.zip,6780cf81eee3a8e9cb18ce5715c8abd2"
+		"PCoAs,https://zenodo.org/records/11565240/files/exported_data.7z,2dfcdd9963df24ab412a623ad3e4d160",
+		"PCoA_PCA_P1,https://zenodo.org/records/11571907/files/exported_data.7z,97f1de6402bd9aec409737d940c0ded3"
+		"PCoA,https://zenodo.org/records/11473121/files/exported_data.7z,af30dbe43ef3cb8d8e48970386d0edea",
 		".,https://zenodo.org/records/12519322/files/pwdb_v2.zip,27e733c03e9122669d559e4b22760489"
 	)
 

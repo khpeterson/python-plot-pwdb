@@ -25,9 +25,10 @@ check for availability before running.
 
 ### Crosschecking
 
-As of version 3 of the 2024 CoW dataset there is a discrepancy between
-the geometries specified in the csv files of the various downloads and
-the topologies specified by the v2 model.txt files.  To line them up:
+As a sanity check, crosscheck.py will verify that the geometries
+specified in the csv files of the various downloads match the
+topologies specified by the v2 model.txt files.  If there is a
+mismatch the directories can be renamed in place.
 ```bash
 python crosscheck.py --rename pwdb-2024
 ```

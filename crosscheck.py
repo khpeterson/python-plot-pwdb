@@ -46,6 +46,7 @@ for t in topologies:
     )
     geos[t] = pd.read_csv(pwdb_path.joinpath(t + '/geo/pwdb_geo_0001.csv'))
 
+mismatch = False
 for k1 in topologies:
     for k2 in topologies:
         if (
@@ -55,10 +56,17 @@ for k1 in topologies:
             (models[k1]['Length [m]'] == geos[k2][' length']).min()
         ):
             print(f'models[{k1}] <== geos[{k2}]')
-            if args.rename:
-                path = pwdb_path.joinpath(k2)
-                renamed_path = pwdb_path.joinpath(k2 + '_renamed_' + k1)
-                path.rename(renamed_path)
+            if k1 != k2:
+                mismatch = True
+                if args.rename:
+                    path = pwdb_path.joinpath(k2)
+                    renamed_path = pwdb_path.joinpath(k2 + '_renamed_' + k1)
+                    path.rename(renamed_path)
+
+if mismatch:
+    print("models and geometries don't match")
+else:
+    print("models and geometries match OK")
 
 if args.rename:
     renamed_paths = pwdb_path.glob('*_renamed_*')
@@ -66,4 +74,5 @@ if args.rename:
         k2 = p.name[0:p.name.index('_renamed_')]
         k1 = p.name[p.name.index('_renamed_') + 9:]
         trimmed_path = pwdb_path.joinpath(k1)
+        print(f"renaming {p} as {trimmed_path}")
         p.rename(trimmed_path)
